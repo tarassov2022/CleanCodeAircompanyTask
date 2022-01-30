@@ -1,8 +1,8 @@
-package Planes;
+package planes;
 
 import java.util.Objects;
 
-abstract public class Plane {
+    public class Plane {
     String model;
     private int maxSpeed;
     private int maxFlightDistance;
@@ -18,19 +18,30 @@ abstract public class Plane {
     public String getModel() {
         return model;
     }
+    public void setModel(String model) {this.model = model; }
 
-    public int getMS() {
-        return maxSpeed;
+    public int getMaxSpeed() { return maxSpeed; }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
     }
 
-    public int Get_Max_Flight_Distance() {
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
     }
 
-    public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
-        return result;
+    public void setMaxFlightDistance(int maxFlightDistance) {
+        this.maxFlightDistance = maxFlightDistance;
     }
+
+    public int getMaxLoadCapacity() {
+        return maxLoadCapacity;
+    }
+
+    public void setMaxLoadCapacity(int maxLoadCapacity) {
+        this.maxLoadCapacity = maxLoadCapacity;
+    }
+
 
     @Override
     public String toString() {
@@ -55,6 +66,7 @@ abstract public class Plane {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
     }
 }

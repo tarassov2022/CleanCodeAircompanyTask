@@ -1,12 +1,14 @@
 import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
-
+import planes.MilitaryPlane;
+import planes.PassengerPlane;
+import planes.Plane;
 import java.util.Arrays;
 import java.util.List;
 
-public class Runner {
+
+public class Main {
+
+
     static List<Plane> planes = Arrays.asList(
             new PassengerPlane("Boeing-737", 900, 12000, 60500, 164),
             new PassengerPlane("Boeing-737-800", 940, 12300, 63870, 192),
@@ -26,15 +28,23 @@ public class Runner {
 
     public static void main(String[] args) {
         Airport airport = new Airport(planes);
-        Airport militaryAirport = new Airport(airport.getMilitaryPlanes());
-        Airport passengerAirport = new Airport(airport.getPasPl());
-        System.out.println("Military airport sorted by max distance: " + militaryAirport
-                .sortByMaxDistance()
-                .toString());
-        System.out.println("Passenger airport sorted by max speed: " + passengerAirport
-                .sortByMaxSpeed()
-                .toString());
+        Airport passengerAirport = new Airport(airport.getPassengerPlanes());
+        System.out.println("\nAll planes list:");
+        airport.printPlane(planes);
+        System.out.println("\nBomber Military planes:");
+        airport.printPlane(airport.getBomberMilitaryPlanes());
+        System.out.println("\nTransport Military  planes:");
+        airport.printPlane(airport.getTransportMilitaryPlanes());
+        System.out.println("\nExperimental planes:");
+        airport.printPlane(airport.getExperimentalPlanes());
+        System.out.println("\nPlanes sorted by max load capacity: ");
+        airport.printPlane(airport.sortByMaxLoadCapacity());
+        System.out.println("\nMilitary planes sorted by max  flight distance: ");
+        airport.printPlane(airport.sortByMaxFlightDistance());
+        System.out.println("\nPassenger planes sorted by max speed: ");
+        airport.printPlane(airport.sortByMaxSpeed());
+        System.out.println("\nPassenger plane with max passenger capacity: ");
+        System.out.println(passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());
 
-        System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());
     }
 }

@@ -92,13 +92,7 @@ public class Airport {
         return planes;
     }
 
-   /* public void printPlane(Collection<? extends Plane> collection) {
-        Iterator<? extends Plane> iterator = collection.iterator();
-        while (iterator.hasNext()) {
-            Plane plane = iterator.next();
-            System.out.println(plane);
-        }
-    }*/
+
    public void printPlane(Collection<? extends Plane> collection) {
        for (Plane plane : collection) {
            System.out.println(plane);

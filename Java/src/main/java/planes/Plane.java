@@ -1,5 +1,4 @@
 package planes;
-
 import java.util.Objects;
 
     abstract public class Plane {
@@ -18,6 +17,7 @@ import java.util.Objects;
     public String getModel() {
         return model;
     }
+        
     public void setModel(String model) {this.model = model; }
 
     public int getMaxSpeed() { return maxSpeed; }
@@ -41,7 +41,6 @@ import java.util.Objects;
     public void setMaxLoadCapacity(int maxLoadCapacity) {
         this.maxLoadCapacity = maxLoadCapacity;
     }
-
 
     @Override
     public String toString() {

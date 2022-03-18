@@ -1,5 +1,4 @@
 package planes;
-
 import models.MilitaryType;
 import java.util.Objects;
 
@@ -15,6 +14,7 @@ public class MilitaryPlane extends Plane{
     public MilitaryType getMilitaryType() {
         return militaryType;
     }
+    
     public void setMilitaryType(MilitaryType militaryType) {
         this.militaryType = militaryType;
     }

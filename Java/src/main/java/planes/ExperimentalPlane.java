@@ -1,14 +1,9 @@
 package planes;
-
-
 import models.ClassificationLevel;
 import models.ExperimentalTypes;
-
 import java.util.Objects;
 
-
 public class ExperimentalPlane extends Plane{
-
 
     private ExperimentalTypes experimentalType;
     private ClassificationLevel classificationLevel;
@@ -18,6 +13,7 @@ public class ExperimentalPlane extends Plane{
         this.experimentalType = experimentalType;
         this.classificationLevel = classificationLevel;
     }
+    
     public ExperimentalTypes getExperimentalType() {
         return experimentalType;
     }
@@ -47,7 +43,6 @@ public class ExperimentalPlane extends Plane{
     public int hashCode() {
         return Objects.hash(super.hashCode(), experimentalType, classificationLevel);
     }
-
 
     @Override
     public String toString() {

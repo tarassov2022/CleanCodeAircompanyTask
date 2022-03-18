@@ -1,10 +1,8 @@
-
 import models.MilitaryType;
 import planes.ExperimentalPlane;
 import planes.MilitaryPlane;
 import planes.PassengerPlane;
 import planes.Plane;
-
 import java.util.*;
 
 public class Airport {
@@ -58,8 +56,7 @@ public class Airport {
             }
         }
         return bomberMilitaryPlanes;
-
-    }
+   }
 
     public PassengerPlane getPassengerPlaneWithMaxPassengersCapacity() {
         List<PassengerPlane> passengerPlanes = getPassengerPlanes();
@@ -67,9 +64,7 @@ public class Airport {
         for (PassengerPlane passengerPlane:passengerPlanes){
             if(passengerPlane.getPassengersCapacity()>planeWithMaxPassengersCapacity.getPassengersCapacity())
                 planeWithMaxPassengersCapacity=passengerPlane;
-
         }
-
         return planeWithMaxPassengersCapacity;
     }
 
@@ -92,7 +87,6 @@ public class Airport {
         return planes;
     }
 
-
    public void printPlane(Collection<? extends Plane> collection) {
        for (Plane plane : collection) {
            System.out.println(plane);
@@ -106,9 +100,7 @@ public class Airport {
                 '}';
     }
 
-
    public Airport(List<? extends Plane> planes) {
        this.planes = planes;
     }
-
 }
